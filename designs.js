@@ -23,8 +23,6 @@ function makeGrid(height, width) {
     }
 }
 
-$(makeGrid(default_heigth, default_width));
-
 submit_button.click(function ( event ) {
     event.preventDefault();
     makeGrid(grid_height, grid_width)
@@ -34,5 +32,7 @@ input_height.on('change', function () { grid_height = $(this).val(); });
 input_width.on('change', function () { grid_width = $(this).val(); });
 input_color.on('change', function () { painting_color = $(this).val(); });
 
-
 grid.on('click', 'td', function ( event ) { $(event.target).css('background-color', painting_color); });
+
+
+$(makeGrid(default_heigth, default_width));
