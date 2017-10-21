@@ -1,3 +1,6 @@
+const default_heigth = 10,
+      default_width = 10;
+
 let submit_button = $('#submit_button'),
     input_height = $('#input_height'),
     input_width = $('#input_width'),
@@ -19,6 +22,8 @@ function makeGrid(height, width) {
         }
     }
 }
+
+$(makeGrid(default_heigth, default_width));
 
 submit_button.click(function ( event ) {
     event.preventDefault();
