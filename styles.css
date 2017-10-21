@@ -1,9 +1,10 @@
 body {
+    font-family: Ubuntu;
     text-align: center;
 }
 
 h1 {
-    font-family: Monoton;
+    font-family: 'Fascinate Inline', cursive;
     font-size: 70px;
     margin: 0.2em;
 }
