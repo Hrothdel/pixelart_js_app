@@ -5,6 +5,7 @@ let submit_button = $('#submit_button'),
     input_height = $('#input_height'),
     input_width = $('#input_width'),
     input_color = $('#color_picker'),
+    input_show_grid = $('#show_grid_borders'),
     grid = $('#pixel_canvas');
 
 let grid_height = input_height.val(),
@@ -18,7 +19,7 @@ function makeGrid(height, width) {
         grid.append('<tr class="grid_row"></tr>');
         let row = $('.grid_row').last();
         for(let j = 0; j < width; j++) {
-            row.append('<td clas="grid_cell"></td>');
+            row.append('<td class="grid_cell"></td>');
         }
     }
 }
@@ -31,6 +32,7 @@ submit_button.click(function ( event ) {
 input_height.on('change', function () { grid_height = $(this).val(); });
 input_width.on('change', function () { grid_width = $(this).val(); });
 input_color.on('change', function () { painting_color = $(this).val(); });
+input_show_grid.on('change', function () { $('.grid_cell').toggleClass('no_border'); });
 
 grid.on('click', 'td', function ( event ) { $(event.target).css('background-color', painting_color); });
 
