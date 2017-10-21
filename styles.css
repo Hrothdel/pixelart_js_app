@@ -1,12 +1,17 @@
 body {
     font-family: Ubuntu;
     text-align: center;
+    color: #fff;
+
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.5); /*Improvised anti-aliasing*/
 }
 
 h1 {
+    color: #000;
     font-family: 'Fascinate Inline', cursive;
     font-size: 70px;
-    margin: 0.2em;
+    margin: 0px;
+    padding: 0px;
 }
 
 h2 {
@@ -17,25 +22,92 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
-table,
-tr,
 td {
-    border: 1px solid black;
+    border: 1px dashed #ccc;
 }
 
 table {
     border-collapse: collapse;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
 }
 
-tr {
-    height: 20px;
-}
-
 td {
+    height: 20px;
     width: 20px;
 }
 
 input[type=number] {
     width: 6em;
+}
+
+#title {
+    text-shadow: 5px 5px 20px #888;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #bbb;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 7px;
+}
+
+.grid_option {
+    white-space: nowrap;
+    background-color: #e55;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 7px;
+    margin: 5px 10px;
+}
+
+#pick_color {
+    margin: 15px;
+}
+
+#canvas_section {
+    background-color: #e55;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding: 20px 50px;
+    padding-top: 0px;
+}
+
+#pixel_canvas {
+    background-color: #fff;
+}
+
+#submit_button {
+    font-size: 17px;
+    color: #fff;
+    background-color: #999;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 7px;
+}
+
+.no_border {
+    border-style: none;
+
+    /*Padding added to leave the size of the grid -roughly- the same*/
+    padding-left: 2px;
+    padding-top: 2px;
 }

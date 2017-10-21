@@ -7,25 +7,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate+Inline">
     <link rel="stylesheet" href="styles.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
+    <section id="title">
+        <h1>Pixel Art Maker</h1>
+    </section>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="10">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="10">
-        <input type="submit" id="submit_button">
-    </form>
+    <section id="content">
+        <section id="costumize_grid">
+            <h2>Customize Grid</h2>
+            <form id="optionsForm">
+                <section id="options">
+                    <span class="grid_option">
+                        Grid Height:
+                        <input type="number" id="input_height" name="height" min="1" value="10">
+                    </span>
+                    <span class="grid_option">
+                        Grid Width:
+                        <input type="number" id="input_width" name="width" min="1" value="10">
+                    </span>
+                    <span class="grid_option">
+                        <input type="checkbox" id="show_grid_borders" checked>
+                        Show Cell Borders
+                    </span>
+                </section>
+                <input type="submit" id="submit_button">
+            </form>
+        </section>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="color_picker">
 
-    <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
+        <section id="pick_color">
+            <h2>Pick A Color</h2>
+            <input type="color" id="color_picker">
+        </section>
+
+        <section id="canvas_section">
+            <h2>Design Canvas</h2>
+            <table id="pixel_canvas"></table>
+        </section>
+    </section>
 
     <script src="designs.js"></script>
 </body>
